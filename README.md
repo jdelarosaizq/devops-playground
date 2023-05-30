@@ -10,12 +10,12 @@ Thank you for taking the time ro read this assessment. This repo simulates a pro
 ## Setup
 
 ### Prerequisites
-Kubernetes 1.19+ - Tested with Docker Desktop
-Helm 3.2.0+
-Terraform v1.4.6
-jq-1.6
-curl
-wget
+- Kubernetes 1.19+ - Tested with Docker Desktop
+- Helm 3.2.0+
+- Terraform v1.4.6
+- jq-1.6
+- curl
+- wget
 
 ### Prepare your local repo 
 In order to share the assessment with us please **fork** this project in your personal Github account.
