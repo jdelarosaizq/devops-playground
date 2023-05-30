@@ -17,14 +17,22 @@ jq-1.6
 curl
 wget
 
-### Fork repo 
+### Prepare your local repo 
 In order to share the assessment with us please **fork** this project in your personal Github account.
 
 Although we will be using a public repo in Github you will need a token to download artifacts from workflows. You can create one from:
 `Profile -> Settings -> Developer setting -> Tokens (classic) 
 `
+Export your token to a variable in your shell:
+`export GITUB_TOKEN=[your token here]
+`
 ## How it works?
-The idea is to interact with a local Kubernetes cluster using Github actions. For the sake of simplicity workflows will only produce a shell script with Terraform and Helm commands.
+The idea is to interact with a local Kubernetes cluster using Github actions. For the sake of simplicity workflows will only produce a shell script with Terraform and Helm commands. After a pipeline is finished we can apply the changes in our local cluster by running this script:
+`./run-pipeline.sh OWNER REPO ARTIFACT_NAME
+`
+i.e.:
+`./run-pipeline.sh jdelarosaizq devops-playground push-branches
+`
 
 ## Our expectations
 We are looking to improve the given starting point and continue adding more stages to the live cycle. Some suggestions are:
