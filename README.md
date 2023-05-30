@@ -27,7 +27,7 @@ Export your token to a variable in your shell:
 `export GITUB_TOKEN=[your token here]
 `
 ## How it works?
-The idea is to interact with a local Kubernetes cluster using Github actions. For the sake of simplicity workflows will only produce a shell script with Terraform and Helm commands. After a pipeline is finished we can apply the changes in our local cluster by running this script:
+The idea is to interact with a local Kubernetes cluster using Github actions. Normally you would use a cloud service to interact from Github workflows, however, for the sake of simplicity, workflows will only produce a shell script with Terraform and Helm commands. After a pipeline is finished we can apply the changes in our local cluster by running this script:
 `./run-pipeline.sh OWNER REPO ARTIFACT_NAME
 `
 i.e.:
@@ -40,5 +40,6 @@ We are looking to improve the given starting point and continue adding more stag
 - Refactor to separate provision from configuration management.
 - Add workflow after merging in main branch.
 - Separate roles for writing and reading from the given database
+
 
 

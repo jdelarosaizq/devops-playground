@@ -13,7 +13,7 @@ provider "aws" {
       env              = "${var.environment[terraform.workspace]}"
       project          = "inv"
       TerraformManaged = true
-      Owner            = "Phoenix"
+      Owner            = "Investigate"
     }
   }
 
