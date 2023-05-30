@@ -11,8 +11,6 @@ environments:
 repositories:
   - name: localstack-charts
     url: https://localstack.github.io/helm-charts
-  - name: neo4j
-    url: https://helm.neo4j.com/neo4j
 ---
 releases:
 
@@ -22,12 +20,3 @@ releases:
     version: 0.6.0
     installed: true
 
-  - name: neo4j
-    namespace: '{{ env "NAMESPACE" | default "localstack" }}'
-    chart: neo4j/neo4j-standalone
-    version: 4.4.13
-    installed: true
-    values:
-      - volumes:
-          data:
-            mode: defaultStorageClass
