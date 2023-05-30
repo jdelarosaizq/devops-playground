@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "helm repo add localstack-charts https://localstack.github.io/helm-charts" > push-branches.sh
-      - run: echo "helm install localstack localstack-charts/localstack --version 0.6.0" > push-branches.sh
-      - run: echo "terraform init -chdir=./terraform" > push-branches.sh
-      - run: echo "terraform apply -chdir=./terraform" > push-branches.sh
+      - run: echo "helm install localstack localstack-charts/localstack --version 0.6.0" >> push-branches.sh
+      - run: echo "terraform init -chdir=./terraform" >> push-branches.sh
+      - run: echo "terraform apply -chdir=./terraform" >> push-branches.sh
       - uses: actions/upload-artifact@v3
         with:
           name: push-branches
