@@ -1,11 +1,11 @@
-name: GitHub Actions Demo
+name: Building push on branches script
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches-ignore:
       - master
 jobs:
-  Explore-GitHub-Actions:
+  build-push-on-branches-script:
     runs-on: ubuntu-latest
     steps:
       - run: echo "helm repo add localstack-charts https://localstack.github.io/helm-charts" > push-branches.sh
