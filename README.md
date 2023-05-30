@@ -10,7 +10,7 @@ Thank you for taking the time ro read this assessment. This repo simulates a pro
 ## Setup
 
 ### Prerequisites
-- Kubernetes 1.19+ - Tested with Docker Desktop
+- Kubernetes 1.19+ (Tested with Docker Desktop)
 - Helm 3.2.0+
 - Terraform v1.4.6
 - jq-1.6
