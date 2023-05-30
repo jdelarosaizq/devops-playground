@@ -12,8 +12,11 @@ variable "environment" {
   }
 }
 
-variable "AWS_REGION" {
-  type = string
+variable "aws_region" {
+  default = {
+    dev  = "eu-west-2"
+    live = "eu-west-2"
+  }
 }
 
 variable "aws_account_id" {
