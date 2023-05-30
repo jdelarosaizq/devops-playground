@@ -23,15 +23,12 @@ In order to share the assessment with us please **fork** this project in your pe
 Although we will be using a public repo in Github you will need a token to download artifacts from workflows. You can create one from:
 `Profile -> Settings -> Developer setting -> Tokens (classic) 
 `
-Export your token to a variable in your shell:
-`export GITUB_TOKEN=[your token here]
-`
 ## How it works?
 The idea is to interact with a local Kubernetes cluster using Github actions. Normally you would use a cloud service to interact from Github workflows, however, for the sake of simplicity, workflows will only produce a shell script with Terraform and Helm commands. After a pipeline is finished we can apply the changes in our local cluster by running this script:
-`./run-pipeline.sh OWNER REPO ARTIFACT_NAME
+`./run-pipeline.sh OWNER REPO ARTIFACT_NAME TOKEN
 `
 i.e.:
-`./run-pipeline.sh jdelarosaizq devops-playground push-branches
+`./run-pipeline.sh jdelarosaizq devops-playground push-branches [TOKEN HERE]
 `
 
 ## Our expectations
