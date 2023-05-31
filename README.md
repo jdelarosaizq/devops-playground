@@ -37,6 +37,8 @@ i.e.:
 `./run-pipeline.sh jdelarosaizq devops-playground push-branches [TOKEN HERE]
 `
 
+You can 
+
 ## Technical Stories
 We are looking to improve the given starting point and continue adding more stages to the live cycle. Some suggestions are:
 - As developer, I want to test my branches before merging to main, so I don't make untested changes in live infrastructure. 

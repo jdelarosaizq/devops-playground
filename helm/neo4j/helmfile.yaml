@@ -28,9 +28,10 @@ releases:
               storageClassName: "hostpath"
               requests:
                 storage: 100Mi
+        neo4jPassword: neo4j
 
   - name: neo4j-importer
-    installed: true # Not working with Localstack
+    installed: true
     needs:
       - '{{ env "NAMESPACE" | default "dev" }}/neo4j'
     namespace: '{{ env "NAMESPACE" | default "dev" }}'

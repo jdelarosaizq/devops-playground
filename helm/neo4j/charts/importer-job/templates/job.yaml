@@ -20,7 +20,7 @@ spec:
               curl -o output.log \
               -H "Accept: application/json;charset=UTF-8" \
               -H "Content-Type: application/json" \
-              -H "Authorization: Basic bmVvNGo6eVFWUFJHcXU5a1Q0TmU=" \
+              -H "Authorization: Basic bmVvNGo6bmVvNGo=" \
               -d  "$BODY" \
               http://neo4j.dev.svc.cluster.local:7474/db/neo4j/tx/commit
       restartPolicy: Never
