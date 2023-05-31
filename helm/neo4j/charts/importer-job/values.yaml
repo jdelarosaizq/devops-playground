@@ -9,4 +9,4 @@ neo4j:
         statement: "MERGE (country:Country {name:csvLine.country}) CREATE (movie:Movie {id:toInteger(csvLine.id), title:csvLine.title, year:toInteger(csvLine.year)}) CREATE (movie)-[:ORIGIN]->(country)"
       rol:
         filename: roles.csv
-        statement: "CALL {MATCH (person:Person {id: toInteger(csvLine.personId)}), (movie:Movie {id: toInteger(csvLine.movieId)}) CREATE (person)-[:ACTED_IN {role: csvLine.role}]->(movie)} IN TRANSACTIONS OF 2 ROWS"
+        statement: "MATCH (person:Person {id: toInteger(csvLine.personId)}), (movie:Movie {id: toInteger(csvLine.movieId)}) CREATE (person)-[:ACTED_IN {role: csvLine.role}]->(movie)"

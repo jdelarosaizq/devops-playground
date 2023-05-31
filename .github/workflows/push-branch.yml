@@ -13,7 +13,7 @@ jobs:
       - run: echo "helmfile -f helm/localstack/helmfile.yaml apply" >> push-branches.sh
       - run: echo "terraform -chdir=./terraform init" >> push-branches.sh
       - run: echo "terraform -chdir=./terraform apply -auto-approve" >> push-branches.sh
-      - run: echo "data/upload-to-s3.sh data/releaseA" >> push-branches.sh
+      - run: echo "data/upload-to-s3.sh releaseA" >> push-branches.sh
       - run: echo "helmfile -f helm/neo4j/helmfile.yaml apply" >> push-branches.sh
       - uses: actions/upload-artifact@v3
         with:

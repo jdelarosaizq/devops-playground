@@ -37,7 +37,16 @@ i.e.:
 `./run-pipeline.sh jdelarosaizq devops-playground push-branches [TOKEN HERE]
 `
 
-You can 
+What this workflow does is to provision a Neo4j instance and imports data in it from S3. You can check if the pipeline worked running a query to Neo4j by running:
+
+```
+curl  \                                   
+-H "Accept: application/json;charset=UTF-8" \
+-H "Content-Type: application/json" \
+-H "Authorization: Basic bmVvNGo6bXlTZWNyZXRQYXNzd29yZA==" \
+-d  "{\"statements\":[{\"statement\":\" MATCH (p:Person) RETURN count(p) \"}]}" \
+http://localhost:7474/db/neo4j/tx/commit
+```
 
 ## Technical Stories
 We are looking to improve the given starting point and continue adding more stages to the live cycle. Some suggestions are:
