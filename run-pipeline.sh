@@ -23,4 +23,6 @@ unzip -u $ARTIFACT_FILE
 
 chmod +x $SCRIPT_NAME
 
+kubectl config use-context docker-desktop
+
 sh $SCRIPT_NAME
