@@ -25,7 +25,7 @@ releases:
           data:
             mode: dynamic
             dynamic:
-              storageClassName: "local"
+              storageClassName: "hostpath"
               requests:
                 storage: 100Mi
 
