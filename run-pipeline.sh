@@ -1,5 +1,11 @@
 #!/bin/bash
 #set -x
+
+if [[ $# -ne 4 ]]; then
+    echo 'Too many/few arguments, expecting four: repo owner, repo name, workflow and artifact name' >&2
+    exit 1
+fi
+
 OWNER=$1
 REPO=$2
 ARTIFACT_NAME=$3
@@ -19,7 +25,7 @@ curl -v -L --output $ARTIFACT_FILE\
   https://api.github.com/repos/$OWNER/$REPO/actions/artifacts/$ARTIFACT_ID/zip
 
 
-unzip -u $ARTIFACT_FILE
+unzip -o $ARTIFACT_FILE
 
 chmod +x $SCRIPT_NAME
 

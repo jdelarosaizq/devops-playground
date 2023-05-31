@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: echo "#!/bin/bash" > push-branches.sh
       - run: echo "set -x" > push-branches.sh
-      - run: echo "helmfile -f helm/localstak/helmfile.yaml apply"c >> push-branches.sh
+      - run: echo "helmfile -f helm/localstak/helmfile.yaml apply" >> push-branches.sh
       - run: echo "terraform -chdir=./terraform init" >> push-branches.sh
       - run: echo "terraform -chdir=./terraform apply -auto-approve" >> push-branches.sh
       - run: echo "data/upload-to-s3.sh data/releaseA" >> push-branches.sh
