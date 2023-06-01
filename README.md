@@ -10,7 +10,7 @@ Thank you for taking the time to read this assessment. This repo simulates a pro
 ## Setup
 
 ### Prerequisites
-- Kubernetes 1.19+ (Tested with Docker Desktop)
+- Kubernetes 1.19+ (Tested with Docker Desktop, but any local Kubernetes cluster will do)
 - Helm 3.2.0+
 - Terraform v1.4.6
 - jq-1.6
@@ -19,13 +19,13 @@ Thank you for taking the time to read this assessment. This repo simulates a pro
 - kubectl
 
 ### Fork the repo
-In order to share the assessment with us please **fork** this project in your personal Github account.
+In order to share the assessment with us please **fork** this project in your personal Github account (forking is necessary for the Github actions to work). Please also clone your fork locally - needed for later steps.
 
 Although we will be using a public repo in Github you will need a token to download artifacts from workflows. You can create one from:
 `Profile -> Settings -> Developer setting -> Tokens (classic) 
 `
-## How it works?
-The idea is to interact with a local Kubernetes cluster using Github actions. Normally you would use a cloud service to interact from Github workflows, however, for the sake of simplicity, workflows will only produce a shell script with Terraform and Helm commands. You have already an example at `.github/workflows/push-branch.yml`. 
+## How does it work?
+The idea is to interact with a local Kubernetes cluster using Github actions. Normally, the Github workflows would interact with a cloud service, however, for the sake of simplicity, workflows will only produce a shell script with Terraform and Helm commands, *for you to run them locally* (in other words, you will be the human component of the CI/CD pipeline). You have already an example at `.github/workflows/push-branch.yml`. 
 
 Once the workflow is finished, the following script will download the resultant artifact and it will run it against your local cluster:
 
@@ -50,11 +50,11 @@ http://localhost:7474/db/neo4j/tx/commit
 
 ## Technical Stories
 We are looking to improve the given starting point and continue adding more stages to the live cycle. Some suggestions are:
-- As developer, I want to test my branches before merging to main, so I don't make untested changes in live infrastructure. 
-- As infrastructure engineer, I want Neo4j to hold state in a persistent volume, so when pod restarts I keep the data.
-- As devops engineer, I want a workflow for merging into main that applies infra changes, so we avoid manual changes.
-- As devops engineer, I want to test that the data was loaded, so my confidence increases. 
-- As service manager, I want to provision new Neo4j instances by using blue-green deployment, so that, there is no downtime. Use the two data releases provided.
+- As a developer, I want to test my branches before merging to main, so I don't make untested changes in live infrastructure. Can you, a devops engineer help me with this?
+- As an infrastructure engineer, I want Neo4j to hold state in a persistent volume, so when pod restarts I keep the data.
+- As a devops engineer, I want a workflow for merging into main that applies infra changes, so we avoid manual changes.
+- As a devops engineer, I want to test that the data was loaded, so my confidence increases. 
+- As a service manager, I want to provision new Neo4j instances by using blue-green deployment, so that, there is no downtime. Use the two data releases provided.
 
 **Note we don't expect you to deliver all of them as long as you will be able to demostrate the key skills**
 
