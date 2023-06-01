@@ -1,6 +1,6 @@
 # devops-playground
 Thank you for taking the time ro read this assessment. This repo simulates a provisioning and configuration management code life cycle. It gives a starting point for candidates to demonstrate skills in certain areas like:
-- Configuration code
+- Configuration as code
 - Infrastructure as code
 - Infrastructure design
 - Peer reviews
@@ -37,7 +37,7 @@ i.e.:
 `./run-pipeline.sh jdelarosaizq devops-playground push-branches [TOKEN HERE]
 `
 
-What this workflow does is to provision a Neo4j instance and imports data in it from S3. You can check if the pipeline worked running a query to Neo4j by running:
+What this workflow does is to provision a Neo4j instance and imports data in it from S3. You can check if the pipeline worked running a query to Neo4j:
 
 ```
 curl  \                                   
@@ -55,7 +55,7 @@ We are looking to improve the given starting point and continue adding more stag
 - As devops engineer, I want a workflow for merging into main that applies infra changes, so we avoid manual changes.
 - As data engineer, I want a workflow to load data in Neo4j from **given** a csv name hosted in a S3 bucket, so that I can release my data.
 - As devops engineer, I want to test that the data was loaded, so my confidence increases. 
-- As service manager, I want to provision new Neo4j instances by using blue-green deployment, so that there is no downtime. 
+- As service manager, I want to provision new Neo4j instances by using blue-green deployment, so that, there is no downtime. 
 
 ## Discussion
 - What would we need to change to deal with very large data files?
@@ -65,6 +65,5 @@ We are looking to improve the given starting point and continue adding more stag
 ## Assumptions
 You can make any assumptions at any time, remember you are free to choose they way you want to demonstrate skills to team, just keep track of them for later discussion with the team.
 
-## 
 
 
