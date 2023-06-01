@@ -53,9 +53,8 @@ We are looking to improve the given starting point and continue adding more stag
 - As developer, I want to test my branches before merging to main, so I don't make untested changes in live infrastructure. 
 - As infrastructure engineer, I want Neo4j to hold state in a persistent volume, so when pod restarts I keep the data.
 - As devops engineer, I want a workflow for merging into main that applies infra changes, so we avoid manual changes.
-- As data engineer, I want a workflow to load data in Neo4j from **given** a csv name hosted in a S3 bucket, so that I can release my data.
 - As devops engineer, I want to test that the data was loaded, so my confidence increases. 
-- As service manager, I want to provision new Neo4j instances by using blue-green deployment, so that, there is no downtime. 
+- As service manager, I want to provision new Neo4j instances by using blue-green deployment, so that, there is no downtime. Use the two data releases provided.
 
 **Note we don't expect you to deliver all of them**
 
