@@ -56,7 +56,7 @@ We are looking to improve the given starting point and continue adding more stag
 - As devops engineer, I want to test that the data was loaded, so my confidence increases. 
 - As service manager, I want to provision new Neo4j instances by using blue-green deployment, so that, there is no downtime. Use the two data releases provided.
 
-**Note we don't expect you to deliver all of them**
+**Note we don't expect you to deliver all of them as long as you will be able to demostrate the key skills**
 
 ## Discussion
 - What would we need to change to deal with very large data files?
