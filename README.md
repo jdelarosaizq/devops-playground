@@ -1,5 +1,5 @@
 # devops-playground
-Thank you for taking the time ro read this assessment. This repo simulates a provisioning and configuration management code life cycle. It gives a starting point for candidates to demonstrate skills in certain areas like:
+Thank you for taking the time to read this assessment. This repo simulates a provisioning and configuration management code life cycle. It gives a starting point for candidates to demonstrate skills in certain areas like:
 - Configuration as code
 - Infrastructure as code
 - Infrastructure design
@@ -27,7 +27,7 @@ Although we will be using a public repo in Github you will need a token to downl
 ## How it works?
 The idea is to interact with a local Kubernetes cluster using Github actions. Normally you would use a cloud service to interact from Github workflows, however, for the sake of simplicity, workflows will only produce a shell script with Terraform and Helm commands. You have already an example at `.github/workflows/push-branch.yml`. 
 
-Once the workflow is finished, the following script will download the resultant artifact from the workflow and it will run it against your local cluster:
+Once the workflow is finished, the following script will download the resultant artifact and it will run it against your local cluster:
 
 `./run-pipeline.sh OWNER REPO ARTIFACT_NAME TOKEN
 `
@@ -37,7 +37,7 @@ i.e.:
 `./run-pipeline.sh jdelarosaizq devops-playground push-branches [TOKEN HERE]
 `
 
-What this workflow does is to provision a Neo4j instance and imports data in it from S3. You can check if the pipeline worked running a query to Neo4j:
+What this workflow does is to provision a Neo4j instance and imports data from S3 into it. You can check if the pipeline worked running a query to Neo4j:
 
 ```
 curl  \                                   
@@ -57,10 +57,12 @@ We are looking to improve the given starting point and continue adding more stag
 - As devops engineer, I want to test that the data was loaded, so my confidence increases. 
 - As service manager, I want to provision new Neo4j instances by using blue-green deployment, so that, there is no downtime. 
 
+**Note we don't expect you to deliver all of them**
+
 ## Discussion
 - What would we need to change to deal with very large data files?
 - What would be a good choice for our volumes?
-- If we use this import process in a real environment. Is there any risk that our date could get stolen?
+- If we use this import process in a real environment. Is there any risk that our data could get stolen?
 
 ## Assumptions
 You can make any assumptions at any time, remember you are free to choose they way you want to demonstrate skills to team, just keep track of them for later discussion with the team.
