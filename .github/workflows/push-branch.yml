@@ -18,3 +18,7 @@ jobs:
         with:
           name: push-branches
           path: push-branches.sh
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "unit test"

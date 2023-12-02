@@ -1,0 +1,14 @@
+name: Building push on branches script
+run-name: "${{ github.actor }} - ${{ github.ref }} - # ${{ github.run_number }} 🚀"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  infra-apply:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "load the credential to deploy infra"
+      - run: echo "terraform -chdir=./terraform apply -auto-approve"
+
